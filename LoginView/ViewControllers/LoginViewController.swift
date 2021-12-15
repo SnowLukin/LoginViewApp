@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         passwordTF.delegate = self
         
         setTextFields()
-        // not really needed but just for practicing
+        // move view when keyboard change frame
         getKeyboardStatus()
     }
     
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
     // Hide keyboard by touching on screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,25 +56,30 @@ class LoginViewController: UIViewController {
     @objc func keyboardWillBeShown(_ notification: NSNotification) {
         
         // move view when keyboard shows up
-        let heigthChange = CGFloat(100)
-        self.view.frame.origin.y = 0 - heigthChange
+        let heigthChange: CGFloat = 100
+        view.frame.origin.y = 0 - heigthChange
     }
     
     @objc func keyboardWillBeHidden(_ notification: NSNotification) {
         
         // move view back to normal
-        self.view.frame.origin.y = 0
+        view.frame.origin.y = 0
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         
-        let loginVC = unwindSegue.destination as! LoginViewController
-        loginVC.userNameTF.text = nil
-        loginVC.passwordTF.text = nil
+        userNameTF.text = nil
+        passwordTF.text = nil
     }
     
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
         forgotAlert(title: "Forgot password?", message: "Your password is Swiftbook")
+    }
+    
+    @IBAction func continueAsClicked(_ sender: UIButton) {
+        userNameTF.text = "Snow"
+        passwordTF.text = "Lukin"
+        performSegue(withIdentifier: "LogInSegue", sender: self)
     }
     
     // MARK: - Public Methods
@@ -117,7 +122,6 @@ class LoginViewController: UIViewController {
     private func invalidInputAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.userNameTF.text = nil
             self.passwordTF.text = nil
         }
         
@@ -148,17 +152,10 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        switch textField {
-        case userNameTF:
+        if textField == userNameTF {
             passwordTF.becomeFirstResponder()
-        case passwordTF:
-            passwordTF.resignFirstResponder()
-            // if username and password filled perform segue
-            if isUserExist() {
-                performSegue(withIdentifier: "LogInSegue", sender: self)
-            }
-        default:
-            break
+        } else if isUserExist() {
+            performSegue(withIdentifier: "LogInSegue", sender: self)
         }
         
         return true

@@ -18,4 +18,4 @@ class User {
 }
 
 // MARK: TEST ACCOUNT
-var users = [User(userName: "Eugenya", password: "Swiftbook")]
+var users = [User(userName: "Eugenya", password: "Swiftbook"), User(userName: "Snow", password: "Lukin")]

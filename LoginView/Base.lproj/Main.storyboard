@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EdN-Fk-bUk">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-oO-6hm">
-                                <rect key="frame" x="40" y="304.33333333333326" width="334" height="287.66666666666674"/>
+                                <rect key="frame" x="40" y="304.5" width="334" height="287.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-IK-e76">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50.5"/>
                                         <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-GM-Ct0">
-                                        <rect key="frame" x="0.0" y="65.666666666666686" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="65.5" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="EEd-0x-Akw"/>
                                         </constraints>
@@ -34,12 +34,12 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" textContentType="nickname"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0QG-Po-wFC">
-                                        <rect key="frame" x="0.0" y="130.66666666666669" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="130.5" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" textContentType="password"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalCentering" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="MF0-Dn-IDo">
-                                        <rect key="frame" x="0.0" y="195.66666666666669" width="334" height="27"/>
+                                        <rect key="frame" x="0.0" y="195.5" width="334" height="27"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-7o-0ku">
                                                 <rect key="frame" x="233" y="0.0" width="101" height="27"/>
@@ -53,7 +53,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajg-78-Rec">
-                                        <rect key="frame" x="0.0" y="237.66666666666669" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="237.5" width="334" height="50"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" systemColor="systemGray6Color"/>
@@ -76,13 +76,25 @@
                                     <constraint firstItem="0QG-Po-wFC" firstAttribute="height" secondItem="WcN-GM-Ct0" secondAttribute="height" id="hzZ-T0-fYj"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-ty-Q2k">
+                                <rect key="frame" x="108" y="617" width="198.5" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue as Snow Lukin">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="continueAsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IcD-tN-pkb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iVM-oO-6hm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Ax1-0j-q6K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVM-oO-6hm" secondAttribute="trailing" constant="40" id="Ow9-SL-Tpi"/>
+                            <constraint firstItem="ycm-ty-Q2k" firstAttribute="top" secondItem="iVM-oO-6hm" secondAttribute="bottom" constant="25" id="P9P-0R-xUT"/>
                             <constraint firstItem="iVM-oO-6hm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="huB-q6-nLq"/>
+                            <constraint firstItem="ycm-ty-Q2k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o6M-ak-f9S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SyD-RM-IbI"/>
@@ -93,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="81.2807881773399"/>
+            <point key="canvasLocation" x="900.00000000000011" y="81.026785714285708"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="vqv-EV-17G">
@@ -110,7 +122,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUT-40-Wpc">
-                                <rect key="frame" x="175.66666666666666" y="306" width="63" height="69.666666666666686"/>
+                                <rect key="frame" x="175.5" y="306" width="63" height="69.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,8 +141,7 @@
                                     <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logoutClicked" destination="tjl-qO-AhQ" eventType="touchUpInside" id="8nG-XY-I8D"/>
-                                    <segue destination="wci-Gf-Y5G" kind="unwind" unwindAction="unwindFor:" id="YSs-aF-lRe"/>
+                                    <segue destination="wci-Gf-Y5G" kind="unwind" unwindAction="unwindFor:" id="Ka9-S0-lV0"/>
                                 </connections>
                             </button>
                         </subviews>
