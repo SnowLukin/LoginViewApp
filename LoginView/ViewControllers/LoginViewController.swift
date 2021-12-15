@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
     
     
     // MARK: - Life cycle
@@ -79,7 +78,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
-        forgotAlert(title: "Forgot Password?", message: "Your Password is SwiftBook")
+        forgotAlert(title: "Forgot Password?", message: "Your Password is Swiftbook")
     }
     
     // MARK: - Public Methods

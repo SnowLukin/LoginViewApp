@@ -86,7 +86,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="SyD-RM-IbI"/>
                     <connections>
-                        <outlet property="loginButton" destination="ajg-78-Rec" id="1p5-2l-aWJ"/>
                         <outlet property="passwordTF" destination="0QG-Po-wFC" id="Hna-mt-tzZ"/>
                         <outlet property="userNameTF" destination="WcN-GM-Ct0" id="1Xb-E1-yxt"/>
                     </connections>
