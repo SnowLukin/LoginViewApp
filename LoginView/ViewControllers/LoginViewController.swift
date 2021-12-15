@@ -100,6 +100,12 @@ class LoginViewController: UIViewController {
         passwordTF.returnKeyType = .done
         
         passwordTF.enablesReturnKeyAutomatically = true
+        
+        userNameTF.tintColor = .lightGray
+        userNameTF.setIcon(UIImage(named: "user")!)
+        
+        passwordTF.tintColor = .lightGray
+        passwordTF.setIcon(UIImage(named: "password")!)
     }
     
     // MARK: Alerts

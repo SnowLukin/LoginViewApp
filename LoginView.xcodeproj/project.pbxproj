@@ -16,6 +16,7 @@
 		D76AA6CB27692DD300E85C1F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6CA27692DD200E85C1F /* WelcomeViewController.swift */; };
 		D76AA6E4276A1CCA00E85C1F /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6E3276A1CCA00E85C1F /* Extentions.swift */; };
 		D76AA6E6276A3EEB00E85C1F /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6E5276A3EEB00E85C1F /* Accounts.swift */; };
+		D76AA6EF276A71A500E85C1F /* TextFieldImages.xcassets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D76AA6CA27692DD200E85C1F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D76AA6E3276A1CCA00E85C1F /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		D76AA6E5276A3EEB00E85C1F /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
+		D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TextFieldImages.xcassets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		D76AA6B527691CD100E85C1F /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */,
 				D76AA6B627691CD100E85C1F /* AppDelegate.swift */,
 				D76AA6B827691CD100E85C1F /* SceneDelegate.swift */,
 				D76AA6ED276A51A500E85C1F /* Accounts */,
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76AA6EF276A71A500E85C1F /* TextFieldImages.xcassets.xcassets in Resources */,
 				D76AA6C327691CD900E85C1F /* LaunchScreen.storyboard in Resources */,
 				D76AA6C027691CD900E85C1F /* Assets.xcassets in Resources */,
 				D76AA6BE27691CD100E85C1F /* Main.storyboard in Resources */,
