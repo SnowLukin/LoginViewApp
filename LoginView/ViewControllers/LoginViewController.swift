@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
     @objc func keyboardWillBeShown(_ notification: NSNotification) {
         
         // move view when keyboard shows up
-        let heigthChange = CGFloat(10)
+        let heigthChange = CGFloat(100)
         self.view.frame.origin.y = 0 - heigthChange
     }
     
@@ -72,13 +72,9 @@ class LoginViewController: UIViewController {
         loginVC.userNameTF.text = nil
         loginVC.passwordTF.text = nil
     }
-
-    @IBAction func forgotUserNameAction(_ sender: UIButton) {
-        forgotAlert(title: "Forgot UserName?", message: "Your UserName is Eugenya")
-    }
     
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
-        forgotAlert(title: "Forgot Password?", message: "Your Password is Swiftbook")
+        forgotAlert(title: "Forgot password?", message: "Your password is Swiftbook")
     }
     
     // MARK: - Public Methods
