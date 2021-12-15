@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  LoginView
 //
 //  Created by Snow Lukin on 14.12.2021.
