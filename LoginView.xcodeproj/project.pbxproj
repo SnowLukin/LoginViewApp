@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D734BC92276D203600083715 /* LoggedInTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D734BC91276D203600083715 /* LoggedInTabBarController.swift */; };
 		D76AA6B727691CD100E85C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6B627691CD100E85C1F /* AppDelegate.swift */; };
 		D76AA6B927691CD100E85C1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6B827691CD100E85C1F /* SceneDelegate.swift */; };
 		D76AA6BB27691CD100E85C1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6BA27691CD100E85C1F /* LoginViewController.swift */; };
@@ -17,9 +18,12 @@
 		D76AA6E4276A1CCA00E85C1F /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6E3276A1CCA00E85C1F /* Extentions.swift */; };
 		D76AA6E6276A3EEB00E85C1F /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AA6E5276A3EEB00E85C1F /* Accounts.swift */; };
 		D76AA6EF276A71A500E85C1F /* TextFieldImages.xcassets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */; };
+		D7BD9813276D2E5900DCDEB9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9812276D2E5900DCDEB9 /* InfoViewController.swift */; };
+		D7BD9815276D37DA00DCDEB9 /* UserImages.xcassets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BD9814276D37DA00DCDEB9 /* UserImages.xcassets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D734BC91276D203600083715 /* LoggedInTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInTabBarController.swift; sourceTree = "<group>"; };
 		D76AA6B327691CD100E85C1F /* LoginView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76AA6B627691CD100E85C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D76AA6B827691CD100E85C1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		D76AA6E3276A1CCA00E85C1F /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		D76AA6E5276A3EEB00E85C1F /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
 		D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TextFieldImages.xcassets.xcassets; sourceTree = "<group>"; };
+		D7BD9812276D2E5900DCDEB9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		D7BD9814276D37DA00DCDEB9 /* UserImages.xcassets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UserImages.xcassets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +102,10 @@
 		D76AA6E9276A517400E85C1F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D734BC91276D203600083715 /* LoggedInTabBarController.swift */,
 				D76AA6BA27691CD100E85C1F /* LoginViewController.swift */,
 				D76AA6CA27692DD200E85C1F /* WelcomeViewController.swift */,
+				D7BD9812276D2E5900DCDEB9 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			children = (
 				D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */,
 				D76AA6BF27691CD900E85C1F /* Assets.xcassets */,
+				D7BD9814276D37DA00DCDEB9 /* UserImages.xcassets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -186,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76AA6EF276A71A500E85C1F /* TextFieldImages.xcassets.xcassets in Resources */,
+				D7BD9815276D37DA00DCDEB9 /* UserImages.xcassets.xcassets in Resources */,
 				D76AA6C327691CD900E85C1F /* LaunchScreen.storyboard in Resources */,
 				D76AA6C027691CD900E85C1F /* Assets.xcassets in Resources */,
 				D76AA6BE27691CD100E85C1F /* Main.storyboard in Resources */,
@@ -199,11 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D734BC92276D203600083715 /* LoggedInTabBarController.swift in Sources */,
 				D76AA6BB27691CD100E85C1F /* LoginViewController.swift in Sources */,
 				D76AA6CB27692DD300E85C1F /* WelcomeViewController.swift in Sources */,
 				D76AA6B727691CD100E85C1F /* AppDelegate.swift in Sources */,
 				D76AA6B927691CD100E85C1F /* SceneDelegate.swift in Sources */,
 				D76AA6E4276A1CCA00E85C1F /* Extentions.swift in Sources */,
+				D7BD9813276D2E5900DCDEB9 /* InfoViewController.swift in Sources */,
 				D76AA6E6276A3EEB00E85C1F /* Accounts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

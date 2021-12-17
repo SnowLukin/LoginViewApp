@@ -43,8 +43,18 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as! WelcomeViewController
-        welcomeVC.userName = userNameTF.text
+        let tabBarController = segue.destination as! UITabBarController
+        // needs to be unwraped forcefully
+        let viewControllers = tabBarController.viewControllers!
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = userNameTF.text
+            }
+            if let infoVC = viewController as? InfoViewController {
+                infoVC.nameString = userNameTF.text
+            }
+        }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
