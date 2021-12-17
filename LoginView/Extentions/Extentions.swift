@@ -8,6 +8,7 @@
 import UIKit
 
 
+// MARK: UIView
 extension UIView {
     func setGradient() {
         
@@ -23,6 +24,7 @@ extension UIView {
     }
 }
 
+// MARK: UITextField
 extension UITextField {
     func setIcon(_ image: UIImage) {
         let iconView = UIImageView(frame:
@@ -34,5 +36,19 @@ extension UITextField {
         iconContainerView.addSubview(iconView)
         leftView = iconContainerView
         leftViewMode = .always
+    }
+}
+
+
+// MARK: UIAlertController
+extension UIAlertController {
+    
+    func setNeededFont() {
+        let attributedString = NSAttributedString(string: self.message ?? "", attributes: [
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),
+            NSAttributedString.Key.foregroundColor : UIColor.gray
+        ])
+        
+        self.setValue(attributedString, forKey: "attributedMessage")
     }
 }

@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
-        forgotAlert(title: "Forgot password?", message: "Your password is Swiftbook")
+        forgotAlert(title: "Forgot password?\n", message: "Your password is Swiftbook\n")
     }
     
     @IBAction func continueAsClicked(_ sender: UIButton) {
@@ -88,7 +88,9 @@ class LoginViewController: UIViewController {
         guard let userName = userNameTF.text, let password = passwordTF.text,
                 checkUser(userName: userName, password: password)
         else {
-            invalidInputAlert(title: "Error", message: "Invalid UserName or Password")
+            let title = "Incorrect username or password\n"
+            let message = "The username or password you entered is incorrect. Please try again.\n"
+            invalidInputAlert(title: title, message: message)
             return false
         }
         return true
@@ -109,26 +111,6 @@ class LoginViewController: UIViewController {
         passwordTF.setIcon(UIImage(named: "password")!)
     }
     
-    // MARK: Alerts
-    
-    private func forgotAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-        
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    private func invalidInputAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.passwordTF.text = nil
-        }
-        
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
     // MARK: Keyboard
     private func getKeyboardStatus() {
         
@@ -146,9 +128,9 @@ class LoginViewController: UIViewController {
     }
 }
 
+
+// MARK: TextField
 extension LoginViewController: UITextFieldDelegate {
-    
-    // MARK: TextField Extension
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -162,3 +144,27 @@ extension LoginViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: Alerts
+extension LoginViewController {
+    private func forgotAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alert.setNeededFont()
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    private func invalidInputAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordTF.text = nil
+        }
+        
+        alert.setNeededFont()
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
