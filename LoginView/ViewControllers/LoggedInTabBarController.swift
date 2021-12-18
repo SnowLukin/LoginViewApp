@@ -9,6 +9,8 @@ import UIKit
 
 class LoggedInTabBarController: UITabBarController {
 
+    var testString: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

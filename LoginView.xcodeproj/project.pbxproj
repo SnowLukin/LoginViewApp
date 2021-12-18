@@ -20,6 +20,7 @@
 		D76AA6EF276A71A500E85C1F /* TextFieldImages.xcassets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */; };
 		D7BD9813276D2E5900DCDEB9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9812276D2E5900DCDEB9 /* InfoViewController.swift */; };
 		D7BD9815276D37DA00DCDEB9 /* UserImages.xcassets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BD9814276D37DA00DCDEB9 /* UserImages.xcassets.xcassets */; };
+		D7BD9817276DC06E00DCDEB9 /* InfoNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9816276DC06E00DCDEB9 /* InfoNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D76AA6EE276A71A500E85C1F /* TextFieldImages.xcassets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TextFieldImages.xcassets.xcassets; sourceTree = "<group>"; };
 		D7BD9812276D2E5900DCDEB9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D7BD9814276D37DA00DCDEB9 /* UserImages.xcassets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UserImages.xcassets.xcassets; sourceTree = "<group>"; };
+		D7BD9816276DC06E00DCDEB9 /* InfoNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D76AA6BA27691CD100E85C1F /* LoginViewController.swift */,
 				D76AA6CA27692DD200E85C1F /* WelcomeViewController.swift */,
 				D7BD9812276D2E5900DCDEB9 /* InfoViewController.swift */,
+				D7BD9816276DC06E00DCDEB9 /* InfoNavigationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D734BC92276D203600083715 /* LoggedInTabBarController.swift in Sources */,
+				D7BD9817276DC06E00DCDEB9 /* InfoNavigationViewController.swift in Sources */,
 				D76AA6BB27691CD100E85C1F /* LoginViewController.swift in Sources */,
 				D76AA6CB27692DD300E85C1F /* WelcomeViewController.swift in Sources */,
 				D76AA6B727691CD100E85C1F /* AppDelegate.swift in Sources */,

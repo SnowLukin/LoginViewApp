@@ -43,7 +43,9 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let tabBarController = segue.destination as! UITabBarController
+        
         // needs to be unwraped forcefully
         let viewControllers = tabBarController.viewControllers!
         
@@ -51,7 +53,9 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = userNameTF.text
             }
-            if let infoVC = viewController as? InfoViewController {
+            if let infoNavVC = viewController as? InfoNavigationViewController {
+                let infoVC = infoNavVC.topViewController as! InfoViewController
+                
                 infoVC.nameString = userNameTF.text
             }
         }

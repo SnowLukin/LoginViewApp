@@ -117,14 +117,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4w5-re-Vh3">
-                                <rect key="frame" x="90" y="195" width="140" height="37"/>
+                                <rect key="frame" x="90" y="310" width="140" height="37"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUT-40-Wpc">
-                                <rect key="frame" x="128.5" y="262" width="63" height="69.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gd4-BA-JCv">
@@ -148,13 +142,11 @@
                         <viewLayoutGuide key="safeArea" id="CR0-oF-xnH"/>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fUT-40-Wpc" firstAttribute="top" secondItem="4w5-re-Vh3" secondAttribute="bottom" constant="30" id="Fdp-zj-0qR"/>
                             <constraint firstItem="CR0-oF-xnH" firstAttribute="trailing" secondItem="4w5-re-Vh3" secondAttribute="trailing" constant="90" id="QgU-X0-9kS"/>
                             <constraint firstItem="CR0-oF-xnH" firstAttribute="trailing" secondItem="Gd4-BA-JCv" secondAttribute="trailing" constant="40" id="ddV-dy-WZd"/>
-                            <constraint firstItem="fUT-40-Wpc" firstAttribute="centerX" secondItem="Q5K-ud-CMO" secondAttribute="centerX" id="fRt-DB-ocv"/>
                             <constraint firstItem="CR0-oF-xnH" firstAttribute="bottom" secondItem="Gd4-BA-JCv" secondAttribute="bottom" constant="100" id="h6G-3W-u41"/>
                             <constraint firstItem="4w5-re-Vh3" firstAttribute="leading" secondItem="CR0-oF-xnH" secondAttribute="leading" constant="90" id="oEl-ai-dyk"/>
-                            <constraint firstItem="4w5-re-Vh3" firstAttribute="top" secondItem="CR0-oF-xnH" secondAttribute="top" constant="195" id="xmr-AJ-AWc"/>
+                            <constraint firstItem="4w5-re-Vh3" firstAttribute="top" secondItem="CR0-oF-xnH" secondAttribute="top" constant="310" id="xmr-AJ-AWc"/>
                             <constraint firstItem="Gd4-BA-JCv" firstAttribute="leading" secondItem="CR0-oF-xnH" secondAttribute="leading" constant="40" id="xp9-Pw-hgZ"/>
                         </constraints>
                     </view>
@@ -178,7 +170,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AQf-uY-Gg0">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.92651791916680093" green="0.92651791916680093" blue="0.92651791916680093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="tjl-qO-AhQ" kind="relationship" relationship="viewControllers" id="MtJ-t0-1MP"/>
@@ -208,7 +200,7 @@
         <!--About me-->
         <scene sceneID="qB1-oz-By3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hb5-vi-mVu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hb5-vi-mVu" customClass="InfoNavigationViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About me" id="k12-tB-GTE">
                         <imageReference key="image" image="person.text.rectangle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
