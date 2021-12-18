@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -170,7 +171,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUh-iJ-tKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wci-Gf-Y5G" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="316" y="1148"/>
+            <point key="canvasLocation" x="-495" y="1146"/>
         </scene>
         <!--Logged In Tab Bar Controller-->
         <scene sceneID="RMe-ed-bLS">
@@ -186,6 +187,7 @@
                     <connections>
                         <segue destination="tjl-qO-AhQ" kind="relationship" relationship="viewControllers" id="MtJ-t0-1MP"/>
                         <segue destination="hb5-vi-mVu" kind="relationship" relationship="viewControllers" id="1be-Ij-JkE"/>
+                        <segue destination="rIe-aX-zqq" kind="relationship" relationship="viewControllers" id="9ry-lb-RLj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfK-hW-9lU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEI-85-gb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2221.875" y="1146.1267605633802"/>
+            <point key="canvasLocation" x="909" y="1919"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="b3s-RW-337">
@@ -242,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAm-6E-DKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="1994"/>
+            <point key="canvasLocation" x="909" y="2697"/>
         </scene>
         <!--About me-->
         <scene sceneID="qB1-oz-By3">
@@ -263,7 +265,42 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JI4-qI-DrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386.9565217391305" y="1147.7678571428571"/>
+            <point key="canvasLocation" x="908" y="1146"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="MS5-2X-uaD">
+            <objects>
+                <collectionViewController id="rIe-aX-zqq" customClass="InfoCollectionViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9UH-sV-RBb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DwJ-MJ-loT" customClass="HeaderLayout" customModule="LoginView" customModuleProvider="target">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="szh-9O-axU">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aeW-hv-RUy">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="rIe-aX-zqq" id="GOt-zr-jT1"/>
+                            <outlet property="delegate" destination="rIe-aX-zqq" id="bgI-Hs-eyk"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="nf6-1P-raP"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yc-wG-VIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="1145"/>
         </scene>
     </scenes>
     <resources>

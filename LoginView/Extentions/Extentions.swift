@@ -36,6 +36,25 @@ extension UIView {
             self.isHidden = hidden
         })
     }
+    
+    // Contraints to superview = 0
+    func fillSuperview() {
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        if let superviewTopAnchor = superview?.topAnchor {
+            self.topAnchor.constraint(equalTo: superviewTopAnchor).isActive = true
+        }
+        if let superviewBottomAnchor = superview?.bottomAnchor {
+            self.bottomAnchor.constraint(equalTo: superviewBottomAnchor).isActive = true
+        }
+        if let superviewLeadingAnchor = superview?.leadingAnchor {
+            self.leadingAnchor.constraint(equalTo: superviewLeadingAnchor).isActive = true
+        }
+        if let superviewTrailingAnchor = superview?.trailingAnchor {
+            self.trailingAnchor.constraint(equalTo: superviewTrailingAnchor).isActive = true
+        }
+    }
 }
 
 // MARK: UITextField

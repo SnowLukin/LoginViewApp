@@ -44,19 +44,21 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let tabBarController = segue.destination as! UITabBarController
+        let user = findUser(userName: userNameTF.text ?? "", password: passwordTF.text ?? "")
+        guard let user = user else { return }
         
+        let tabBarController = segue.destination as! UITabBarController
         // needs to be unwraped forcefully
         let viewControllers = tabBarController.viewControllers!
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = userNameTF.text
+                welcomeVC.userName = user.name
             }
             if let infoNavVC = viewController as? InfoNavigationViewController {
                 let infoVC = infoNavVC.topViewController as! InfoViewController
-                
-                infoVC.nameString = userNameTF.text
+                infoVC.nameString = user.name
+                infoVC.bioString = user.bio
             }
         }
     }
@@ -134,11 +136,23 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    // MARK: Find user
+    private func findUser(userName: String, password: String) -> User? {
+        for user in users {
+            if user.userName == userName && user.password == password {
+                return user
+            }
+        }
+        return nil
+    }
+    
     // MARK: Check User
     private func checkUser(userName: String, password: String) -> Bool {
         users.contains(where: {
             $0.userName == userName && $0.password == password
         })
+        
+        
     }
 }
 

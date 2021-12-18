@@ -13,13 +13,6 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var userImageView: UIImageView!
     
-//    let imageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.image = UIImage(named: "JokerSquareImage")
-//
-//        return imageView
-//    }()
-    
     var userName: String!
     
     override func viewDidLoad() {
@@ -34,16 +27,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        print("WillLayoutSubviews")
         userImageView.getCircleView()
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        NSLayoutConstraint.activate([
-//            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 195),
-//            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            imageView.heightAnchor.constraint(equalToConstant: 150),
-//            imageView.widthAnchor.constraint(equalToConstant: 150)
-//        ])
     }
     
 }
