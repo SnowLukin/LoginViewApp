@@ -10,6 +10,7 @@ import UIKit
 
 // MARK: UIView
 extension UIView {
+    
     func setGradient() {
         
         let firstColor = UIColor.systemBlue.cgColor
@@ -21,6 +22,19 @@ extension UIView {
         gradientLayer.startPoint = CGPoint.zero
         gradientLayer.colors = [firstColor, secondColor]
         self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func setBlueColor() {
+        
+        let blueBackgroundColor = UIColor(red: 0.091, green: 0.137, blue: 0.174, alpha: 1)
+        self.backgroundColor = blueBackgroundColor
+    }
+    
+    func hideView(hidden: Bool) {
+        
+        UIView.transition(with: self, duration: 0.1, options: .transitionCrossDissolve, animations: {
+            self.isHidden = hidden
+        })
     }
 }
 

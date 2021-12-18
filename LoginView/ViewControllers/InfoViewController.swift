@@ -9,6 +9,8 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    var nameString: String!
+    
     var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "StreetImage")
@@ -37,39 +39,38 @@ class InfoViewController: UIViewController {
         ], range: NSRange(location: 0, length: 11))
         label.textAlignment = .left
         label.text = text
-        label.textColor = .black
+        label.textColor = .white
         label.numberOfLines = 0
         label.attributedText = context
         
         return label
     }()
     
+    let scrollTopEdgeInsets: CGFloat = 200
+    
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = .systemGray
-        
+        scrollView.setBlueColor()
+        scrollView.layer.masksToBounds = true
+        scrollView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         return scrollView
     }()
-    
-    var nameString: String!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemGray
+        scrollView.delegate = self
         
         nameLabel.text = nameString ?? "Label"
         
         textLabel.frame.size.width = view.frame.width - 32
         textLabel.sizeToFit()
+        scrollView.contentSize.height = textLabel.frame.height
         
         view.addSubview(imageView)
         view.addSubview(nameLabel)
         view.addSubview(scrollView)
         scrollView.addSubview(textLabel)
-        
-        scrollView.contentSize.height = textLabel.frame.height
     }
     
     override func viewWillLayoutSubviews() {
@@ -93,7 +94,42 @@ class InfoViewController: UIViewController {
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            scrollView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            scrollView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10)
         ])
+    }
+    
+    private func resizeScrollView(toTop: Bool) {
+        
+        if toTop {
+            NSLayoutConstraint.activate([
+                scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                scrollView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10)
+            ])
+        }
+    }
+}
+
+extension InfoViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+        
+        if translation.y < 0 {
+            // swipes from top to bottom of screen -> down
+            imageView.hideView(hidden: true)
+            resizeScrollView(toTop: true)
+        } else {
+            // swipes from bottom to top of screen -> up
+        }
+        
+        // scrolled up to the top
+        // show image view
+        if scrollView.contentOffset.y <= 0 {
+            imageView.hideView(hidden: false)
+            resizeScrollView(toTop: false)
+        }
     }
 }
