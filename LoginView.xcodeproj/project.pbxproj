@@ -123,9 +123,9 @@
 				D734BC91276D203600083715 /* LoggedInTabBarController.swift */,
 				D76AA6BA27691CD100E85C1F /* LoginViewController.swift */,
 				D76AA6CA27692DD200E85C1F /* WelcomeViewController.swift */,
+				D7BD9823276F276800DCDEB9 /* InfoTab */,
 				D7BD9818276E479500DCDEB9 /* Test */,
 				D7BD9819276E47B200DCDEB9 /* Test2 */,
-				D7BD9823276F276800DCDEB9 /* InfoTab */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
