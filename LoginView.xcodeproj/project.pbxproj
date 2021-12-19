@@ -123,9 +123,9 @@
 				D734BC91276D203600083715 /* LoggedInTabBarController.swift */,
 				D76AA6BA27691CD100E85C1F /* LoginViewController.swift */,
 				D76AA6CA27692DD200E85C1F /* WelcomeViewController.swift */,
-				D7BD9818276E479500DCDEB9 /* InfoViewControllers */,
-				D7BD9819276E47B200DCDEB9 /* CollectionViewController */,
-				D7BD9823276F276800DCDEB9 /* TableViewController */,
+				D7BD9818276E479500DCDEB9 /* Test */,
+				D7BD9819276E47B200DCDEB9 /* Test2 */,
+				D7BD9823276F276800DCDEB9 /* InfoTab */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,22 +156,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D7BD9818276E479500DCDEB9 /* InfoViewControllers */ = {
+		D7BD9818276E479500DCDEB9 /* Test */ = {
 			isa = PBXGroup;
 			children = (
 				D7BD9812276D2E5900DCDEB9 /* InfoViewController.swift */,
 				D7BD9816276DC06E00DCDEB9 /* InfoNavigationViewController.swift */,
 			);
-			path = InfoViewControllers;
+			path = Test;
 			sourceTree = "<group>";
 		};
-		D7BD9819276E47B200DCDEB9 /* CollectionViewController */ = {
+		D7BD9819276E47B200DCDEB9 /* Test2 */ = {
 			isa = PBXGroup;
 			children = (
 				D7BD981E276E5B9E00DCDEB9 /* Header */,
 				D7BD981A276E47DC00DCDEB9 /* InfoCollectionViewController.swift */,
 			);
-			path = CollectionViewController;
+			path = Test2;
 			sourceTree = "<group>";
 		};
 		D7BD981E276E5B9E00DCDEB9 /* Header */ = {
@@ -183,14 +183,14 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		D7BD9823276F276800DCDEB9 /* TableViewController */ = {
+		D7BD9823276F276800DCDEB9 /* InfoTab */ = {
 			isa = PBXGroup;
 			children = (
 				D7BD9836276FACBD00DCDEB9 /* NewInfoNavigationController.swift */,
 				D7BD983A276FC2FB00DCDEB9 /* InfoViewController */,
 				D7BD9838276FC2EA00DCDEB9 /* EditInfoViewController.swift */,
 			);
-			path = TableViewController;
+			path = InfoTab;
 			sourceTree = "<group>";
 		};
 		D7BD9826276F396100DCDEB9 /* Header */ = {
