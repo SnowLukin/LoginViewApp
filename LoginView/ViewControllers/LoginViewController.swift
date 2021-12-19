@@ -54,13 +54,9 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
             }
-            if let infoNavVC = viewController as? InfoNavigationViewController {
-                let infoVC = infoNavVC.topViewController as! InfoViewController
-                infoVC.user = user
-            }
             
-            if let thirdNavVC = viewController as? NewInfoNavigationController {
-                let infoVC = thirdNavVC.topViewController as! FancyInfoViewController
+            if let infoNavVC = viewController as? NewInfoNavigationController {
+                let infoVC = infoNavVC.topViewController as! FancyInfoViewController
                 infoVC.user = user
             }
         }

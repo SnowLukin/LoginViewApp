@@ -185,77 +185,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="tjl-qO-AhQ" kind="relationship" relationship="viewControllers" id="MtJ-t0-1MP"/>
-                        <segue destination="hb5-vi-mVu" kind="relationship" relationship="viewControllers" id="1be-Ij-JkE"/>
-                        <segue destination="rIe-aX-zqq" kind="relationship" relationship="viewControllers" id="9ry-lb-RLj"/>
                         <segue destination="J0u-XG-zk6" kind="relationship" relationship="viewControllers" id="OFC-VE-Z2y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfK-hW-9lU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="909" y="355"/>
-        </scene>
-        <!--Info View Controller-->
-        <scene sceneID="ID7-Vg-jPE">
-            <objects>
-                <viewController id="U7J-W3-CDZ" customClass="InfoViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QRz-MI-FnG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="SSy-Bi-Poz"/>
-                        <color key="backgroundColor" red="0.090582124890000004" green="0.13718774910000001" blue="0.17386439440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="oQs-5k-uxs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vEI-85-gb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="456" y="1925"/>
-        </scene>
-        <!--About me-->
-        <scene sceneID="qB1-oz-By3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hb5-vi-mVu" customClass="InfoNavigationViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About me" id="k12-tB-GTE">
-                        <imageReference key="image" image="person.text.rectangle.fill" catalog="system" symbolScale="large"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Im9-7B-YM7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="U7J-W3-CDZ" kind="relationship" relationship="rootViewController" id="uVf-qK-sMw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JI4-qI-DrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="456" y="1145"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="MS5-2X-uaD">
-            <objects>
-                <collectionViewController id="rIe-aX-zqq" customClass="InfoCollectionViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9UH-sV-RBb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DwJ-MJ-loT" customClass="HeaderLayout" customModule="LoginView" customModuleProvider="target">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                        <connections>
-                            <outlet property="dataSource" destination="rIe-aX-zqq" id="GOt-zr-jT1"/>
-                            <outlet property="delegate" destination="rIe-aX-zqq" id="bgI-Hs-eyk"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="nf6-1P-raP"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7yc-wG-VIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1547" y="1145"/>
         </scene>
         <!--Fancy Info View Controller-->
         <scene sceneID="mzg-PX-5ej">
