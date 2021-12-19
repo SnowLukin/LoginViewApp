@@ -26,8 +26,14 @@ extension UIView {
     
     func setBlueColor() {
         
-        let blueBackgroundColor = UIColor(red: 0.091, green: 0.137, blue: 0.174, alpha: 1)
-        self.backgroundColor = blueBackgroundColor
+        let backgroundColor = UIColor(red: 0.091, green: 0.137, blue: 0.174, alpha: 1)
+        self.backgroundColor = backgroundColor
+    }
+    
+    func setLightBlueColor() {
+        
+        let backgroundColor = UIColor(red: 0.126, green: 0.188, blue: 0.249, alpha: 1)
+        self.backgroundColor = backgroundColor
     }
     
     func hideView(hidden: Bool) {

@@ -22,7 +22,7 @@ class InfoCollectionViewController: UICollectionViewController {
     
     // MARK: Number of cells in collection view
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+        return 10
     }
     
     // MARK: Header
@@ -71,7 +71,7 @@ extension InfoCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     // Cell size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width - 2 * padding, height: 50)
+        return .init(width: view.frame.width - 2 * padding, height: 100)
     }
     
     // Header size

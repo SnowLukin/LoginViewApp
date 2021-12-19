@@ -9,8 +9,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
-    var nameString: String!
-    var bioString: String!
+    var user: User?
     
     var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -36,8 +35,6 @@ class InfoViewController: UIViewController {
         return label
     }()
     
-    let scrollTopEdgeInsets: CGFloat = 200
-    
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.setBlueColor()
@@ -49,21 +46,12 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = nameString ?? "Label"
+        nameLabel.text = "\(user?.name ?? "") \(user?.surname ?? "")"
         
         setBioLabelText()
         bioLabel.frame.size.width = view.frame.width - 32
         bioLabel.sizeToFit()
         scrollView.contentSize.height = bioLabel.frame.height
-        
-//        view.addSubview(imageView)
-//        view.addSubview(nameLabel)
-//        view.addSubview(scrollView)
-//        scrollView.addSubview(bioLabel)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
         view.addSubview(imageView)
         view.addSubview(nameLabel)
@@ -96,7 +84,7 @@ class InfoViewController: UIViewController {
     }
     
     private func setBioLabelText() {
-        let context = NSMutableAttributedString(string: bioString ?? "", attributes: [
+        let context = NSMutableAttributedString(string: user?.bio ?? "", attributes: [
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20)
         ])
         

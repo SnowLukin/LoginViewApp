@@ -16,6 +16,7 @@ class LoggedInTabBarController: UITabBarController {
         
         // adding top border to tabbar
         addTabBarTopLine()
+        
     }
     
     

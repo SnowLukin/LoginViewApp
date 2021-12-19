@@ -24,6 +24,11 @@
 		D7BD981B276E47DC00DCDEB9 /* InfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD981A276E47DC00DCDEB9 /* InfoCollectionViewController.swift */; };
 		D7BD981D276E4C0800DCDEB9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD981C276E4C0800DCDEB9 /* HeaderView.swift */; };
 		D7BD9820276E5BC700DCDEB9 /* HeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD981F276E5BC700DCDEB9 /* HeaderLayout.swift */; };
+		D7BD9822276F24B100DCDEB9 /* FancyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9821276F24B100DCDEB9 /* FancyInfoViewController.swift */; };
+		D7BD9825276F27A300DCDEB9 /* InfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9824276F27A300DCDEB9 /* InfoHeader.swift */; };
+		D7BD9835276FA25E00DCDEB9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9834276FA25E00DCDEB9 /* InfoCell.swift */; };
+		D7BD9837276FACBD00DCDEB9 /* NewInfoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9836276FACBD00DCDEB9 /* NewInfoNavigationController.swift */; };
+		D7BD9839276FC2EB00DCDEB9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD9838276FC2EA00DCDEB9 /* EditInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		D7BD981A276E47DC00DCDEB9 /* InfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewController.swift; sourceTree = "<group>"; };
 		D7BD981C276E4C0800DCDEB9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D7BD981F276E5BC700DCDEB9 /* HeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLayout.swift; sourceTree = "<group>"; };
+		D7BD9821276F24B100DCDEB9 /* FancyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyInfoViewController.swift; sourceTree = "<group>"; };
+		D7BD9824276F27A300DCDEB9 /* InfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHeader.swift; sourceTree = "<group>"; };
+		D7BD9834276FA25E00DCDEB9 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		D7BD9836276FACBD00DCDEB9 /* NewInfoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoNavigationController.swift; sourceTree = "<group>"; };
+		D7BD9838276FC2EA00DCDEB9 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +110,8 @@
 				D734BC90276D15CA00083715 /* Supports */,
 				D76AA6E9276A517400E85C1F /* ViewControllers */,
 				D76AA6EB276A518400E85C1F /* Extentions */,
-				D76AA6F0276A747700E85C1F /* Resources */,
 				D76AA6ED276A51A500E85C1F /* Models */,
+				D76AA6F0276A747700E85C1F /* Resources */,
 				D734BC8F276D154000083715 /* Storyboards */,
 			);
 			path = LoginView;
@@ -110,11 +120,12 @@
 		D76AA6E9276A517400E85C1F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D7BD9819276E47B200DCDEB9 /* CollectionViewController */,
 				D734BC91276D203600083715 /* LoggedInTabBarController.swift */,
 				D76AA6BA27691CD100E85C1F /* LoginViewController.swift */,
 				D76AA6CA27692DD200E85C1F /* WelcomeViewController.swift */,
 				D7BD9818276E479500DCDEB9 /* InfoViewControllers */,
+				D7BD9819276E47B200DCDEB9 /* CollectionViewController */,
+				D7BD9823276F276800DCDEB9 /* TableViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -170,6 +181,42 @@
 				D7BD981F276E5BC700DCDEB9 /* HeaderLayout.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		D7BD9823276F276800DCDEB9 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7BD9836276FACBD00DCDEB9 /* NewInfoNavigationController.swift */,
+				D7BD983A276FC2FB00DCDEB9 /* InfoViewController */,
+				D7BD9838276FC2EA00DCDEB9 /* EditInfoViewController.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		D7BD9826276F396100DCDEB9 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D7BD9824276F27A300DCDEB9 /* InfoHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		D7BD9827276F396E00DCDEB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D7BD9834276FA25E00DCDEB9 /* InfoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D7BD983A276FC2FB00DCDEB9 /* InfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7BD9821276F24B100DCDEB9 /* FancyInfoViewController.swift */,
+				D7BD9827276F396E00DCDEB9 /* Cell */,
+				D7BD9826276F396100DCDEB9 /* Header */,
+			);
+			path = InfoViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,14 +294,19 @@
 			files = (
 				D734BC92276D203600083715 /* LoggedInTabBarController.swift in Sources */,
 				D7BD9817276DC06E00DCDEB9 /* InfoNavigationViewController.swift in Sources */,
+				D7BD9837276FACBD00DCDEB9 /* NewInfoNavigationController.swift in Sources */,
 				D7BD981B276E47DC00DCDEB9 /* InfoCollectionViewController.swift in Sources */,
 				D76AA6BB27691CD100E85C1F /* LoginViewController.swift in Sources */,
+				D7BD9839276FC2EB00DCDEB9 /* EditInfoViewController.swift in Sources */,
+				D7BD9825276F27A300DCDEB9 /* InfoHeader.swift in Sources */,
 				D76AA6CB27692DD300E85C1F /* WelcomeViewController.swift in Sources */,
 				D76AA6B727691CD100E85C1F /* AppDelegate.swift in Sources */,
 				D76AA6B927691CD100E85C1F /* SceneDelegate.swift in Sources */,
+				D7BD9835276FA25E00DCDEB9 /* InfoCell.swift in Sources */,
 				D7BD981D276E4C0800DCDEB9 /* HeaderView.swift in Sources */,
 				D7BD9820276E5BC700DCDEB9 /* HeaderLayout.swift in Sources */,
 				D76AA6E4276A1CCA00E85C1F /* Extentions.swift in Sources */,
+				D7BD9822276F24B100DCDEB9 /* FancyInfoViewController.swift in Sources */,
 				D7BD9813276D2E5900DCDEB9 /* InfoViewController.swift in Sources */,
 				D76AA6E6276A3EEB00E85C1F /* Accounts.swift in Sources */,
 			);

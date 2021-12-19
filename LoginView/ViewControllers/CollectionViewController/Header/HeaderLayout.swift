@@ -34,11 +34,7 @@ class HeaderLayout: UICollectionViewFlowLayout {
                 attributes.frame = CGRect(x: 0, y: contentOffsetY, width: width, height: height)
                 
             }
-            
-            
-            
         })
-        
         return layoutAttributes
     }
     

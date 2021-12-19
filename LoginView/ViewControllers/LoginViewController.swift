@@ -19,19 +19,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.setBlueColor()
         userNameTF.delegate = self
         passwordTF.delegate = self
         
         setTextFields()
         // move view when keyboard change frame
         getKeyboardStatus()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        view.setGradient()
     }
     
     // MARK: - Override methods
@@ -45,7 +39,12 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let user = findUser(userName: userNameTF.text ?? "", password: passwordTF.text ?? "")
-        guard let user = user else { return }
+        guard let user = user else {
+            let title = "Incorrect username or password\n"
+            let message = "The username or password you entered is incorrect. Please try again.\n"
+            invalidInputAlert(title: title, message: message)
+            return
+        }
         
         let tabBarController = segue.destination as! UITabBarController
         // needs to be unwraped forcefully
@@ -53,18 +52,18 @@ class LoginViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.name
+                welcomeVC.user = user
             }
             if let infoNavVC = viewController as? InfoNavigationViewController {
                 let infoVC = infoNavVC.topViewController as! InfoViewController
-                infoVC.nameString = user.name
-                infoVC.bioString = user.bio
+                infoVC.user = user
+            }
+            
+            if let thirdNavVC = viewController as? NewInfoNavigationController {
+                let infoVC = thirdNavVC.topViewController as! FancyInfoViewController
+                infoVC.user = user
             }
         }
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        isUserExist()
     }
     
     // MARK: - IBActions
@@ -89,11 +88,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
-        forgotAlert(title: "Forgot password?\n", message: "Your password is Swiftbook\n")
+        forgotAlert(title: "Forgot password?\n", message: "Your password is Lukin\n")
     }
     
     @IBAction func continueAsClicked(_ sender: UIButton) {
-        userNameTF.text = "Snow"
+        userNameTF.text = "@snowlukin"
         passwordTF.text = "Lukin"
         performSegue(withIdentifier: "LogInSegue", sender: self)
     }

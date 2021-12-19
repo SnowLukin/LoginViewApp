@@ -13,13 +13,13 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var userImageView: UIImageView!
     
-    var userName: String!
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logoutButton.layer.cornerRadius = 20
-        welcomeLabel.text = "Welcome, \(userName ?? "")!"
+        welcomeLabel.text = "Welcome, \(user?.name ?? "") \(user?.surname ?? "")!"
         
         userImageView.image = UIImage(named: "JokerSquareImage")
         
