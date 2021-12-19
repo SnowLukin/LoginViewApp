@@ -170,7 +170,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUh-iJ-tKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wci-Gf-Y5G" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-495" y="1146"/>
+            <point key="canvasLocation" x="-41" y="1144"/>
         </scene>
         <!--Logged In Tab Bar Controller-->
         <scene sceneID="RMe-ed-bLS">
@@ -270,18 +270,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFv-94-vsx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484.375" y="1924.6478873239437"/>
+            <point key="canvasLocation" x="1598" y="1899"/>
         </scene>
         <!--Edit Info View Controller-->
         <scene sceneID="Wa4-QN-Prv">
             <objects>
-                <viewController id="zYM-qZ-iH1" customClass="EditInfoViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="zYM-qZ-iH1" customClass="EditInfoViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NPA-uk-AGS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under Construction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4B-H7-FEu">
-                                <rect key="frame" x="50" y="224" width="220" height="115"/>
+                                <rect key="frame" x="50" y="224" width="220" height="164"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -300,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsB-kT-Kqq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484.375" y="2669.3661971830988"/>
+            <point key="canvasLocation" x="1598" y="2666"/>
         </scene>
         <!--Info-->
         <scene sceneID="97E-f9-RHk">
@@ -322,7 +322,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6He-qy-C95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486.25" y="1142.9577464788733"/>
+            <point key="canvasLocation" x="1599" y="1143"/>
         </scene>
     </scenes>
     <resources>
