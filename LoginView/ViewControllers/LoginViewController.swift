@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    let users = [User.getUser()]
     
     // MARK: - Life cycle
     
