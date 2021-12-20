@@ -19,9 +19,9 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         logoutButton.layer.cornerRadius = 20
-        welcomeLabel.text = "Welcome, \(user?.name ?? "") \(user?.surname ?? "")!"
+        welcomeLabel.text = "Welcome, \(user?.person.fullName ?? "")!"
         
-        userImageView.image = UIImage(named: "JokerSquareImage")
+        userImageView.image = UIImage(named: user?.person.image ?? "JokerSquareImage")
         
     }
     

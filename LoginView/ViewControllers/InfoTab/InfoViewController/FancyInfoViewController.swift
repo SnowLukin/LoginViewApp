@@ -35,8 +35,8 @@ class FancyInfoViewController: UIViewController {
         
         userInfoSections = [
             [user?.userName ?? ""],
-            [user?.name ?? "", user?.surname ?? ""],
-            [user?.bio ?? ""]
+            [user?.person.name ?? "", user?.person.surname ?? ""],
+            [user?.person.bio ?? ""]
         ]
         
         

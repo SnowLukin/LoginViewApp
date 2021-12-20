@@ -10,27 +10,44 @@ import UIKit
 class User {
     let userName: String
     let password: String
+    let person: Person
     
-    let name: String
-    let surname: String
-    let bio: String
-    
-    
-    
-    init(userName: String, password: String, name: String, surname: String, bio: String) {
+    init(userName: String, password: String, person: Person) {
         self.userName = userName
         self.password = password
-        self.name = name
-        self.surname = surname
-        self.bio = bio
+        self.person = person
     }
     
     // TEST ACCOUNT
     static func getUser() -> User {
         User(userName: "@snowlukin",
              password: "Lukin",
-             name: "Snow",
-             surname: "Lukin",
-             bio: "Живу в Краснодаре, учусь тут же. \nНаправление Фундаментальная информатика и информационные технологии. Скорее математик чем программист, не знаю что хуже. \nВ университетах России не преподают Swift поэтому я с большим удовольствием хожу на пары раз в месяц и умудряюсь закрывать экзамены автоматами. \nПосле университета планирую поехать в Америку к Тиму Куку и работать на него за миллион долларов в секунду, а также найти богатую жену, чтобы она покупала мне дорогие вещи.\nКонец.\nP.S. Не придумал ничего остроумнее")
+             person: Person.getPerson())
     }
 }
+
+class Person {
+    let name: String
+    let surname: String
+    let image: String
+    let bio: String
+    
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    init(name: String, surname: String, image: String, bio: String) {
+        self.name = name
+        self.surname = surname
+        self.image = image
+        self.bio = bio
+    }
+    
+    static func getPerson() -> Person {
+        Person(name: "Snow",
+               surname: "Lukin",
+               image: "JokerSquareImage",
+               bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+    }
+}
+

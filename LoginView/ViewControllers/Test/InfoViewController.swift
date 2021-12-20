@@ -46,7 +46,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = "\(user?.name ?? "") \(user?.surname ?? "")"
+        nameLabel.text = "\(user?.person.fullName ?? "")"
         
         setBioLabelText()
         bioLabel.frame.size.width = view.frame.width - 32
@@ -84,7 +84,7 @@ class InfoViewController: UIViewController {
     }
     
     private func setBioLabelText() {
-        let context = NSMutableAttributedString(string: user?.bio ?? "", attributes: [
+        let context = NSMutableAttributedString(string: user?.person.bio ?? "", attributes: [
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20)
         ])
         
